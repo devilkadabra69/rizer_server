@@ -1,0 +1,16 @@
+[project]
+name = "rizer-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "asyncpg>=0.31.0",
+    "black>=26.5.1",
+    "fastapi[standard]>=0.136.3",
+    "isort>=8.0.1",
+    "passlib[argon2]>=1.7.4",
+    "psycopg2>=2.9.12",
+    "python-jose>=3.5.0",
+    "sqlalchemy>=2.0.50",
+]

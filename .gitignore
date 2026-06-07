@@ -1,0 +1,76 @@
+db_init.py
+
+# envionment variable
+*.env
+.env*
+*.env/
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type Checkers
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Linters
+.ruff_cache/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# SQLite Databases
+*.db
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# uv
+.uv/
+
+# FastAPI runtime files
+*.pid
+
+# Temporary files
+tmp/
+temp/
+*.tmp
