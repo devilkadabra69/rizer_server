@@ -1,8 +1,9 @@
 from sqlalchemy.ext.asyncio import create_async_engine,async_sessionmaker,AsyncSession
 from typing import AsyncGenerator
+from app.core.config import get_settings,Settings
 
 _engine = create_async_engine(
-    "postgresql+asyncpg://postgres:postgres@localhost:5432/rizer",
+    url=get_settings().construct_db_url,
     echo=True
 )
 

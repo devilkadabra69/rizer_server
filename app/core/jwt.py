@@ -1,13 +1,16 @@
 from jose import jwt,JWTError,ExpiredSignatureError,exceptions
 from datetime import datetime,timezone,timedelta
+from app.core.config import get_settings,Settings
+
+__config:Settings = get_settings()
 
 class JwtService:
 
-    ACCESS_TOKEN_SECRET:str = "qwertyuioplkjhgfdsazxcvbnm"
-    REFRESH_TOKEN_SECRET:str = "poiuytrewqasdfghjklmnbvcxz"
-    ACCESS_TOKEN_EXPIRY_MIN:int = 15
-    REFRESH_TOKEN_EXPIRY_DAY:int = 2
-    ALGORITHM:str = "HS256"
+    ACCESS_TOKEN_SECRET:str = __config.ACCESS_TOKEN_SECRET
+    REFRESH_TOKEN_SECRET:str = __config.REFRESH_TOKEN_SECRET
+    ACCESS_TOKEN_EXPIRY_MIN:int = __config.ACCESS_TOKEN_EXPIRY_MIN
+    REFRESH_TOKEN_EXPIRY_DAY:int = __config.REFRESH_TOKEN_EXPIRY_DAY
+    ALGORITHM:str = __config.ALGORITHM
 
     @staticmethod
     def create_access_token(user_id:str) -> str:
